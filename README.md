@@ -41,5 +41,7 @@ Test coverage is around 80%, considering all the projects together.
 
 # Future improvements
 
-* Integrate frontend screens into 
+Unfortunately I did not had much time to focus in this project. Here's my list of improvements that I will revisit as soon as I can:
+
+* Create a frontend app using Angular to integrate with backend
 * Better coverage of integration tests
