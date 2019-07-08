@@ -1,0 +1,106 @@
+
+
+/* Required */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'); 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+body {
+    font-family: 'Patrick Hand', cursive;
+}
+
+.black-border {
+    border: 2px solid #000;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
+.container {
+    padding: 1.5em;
+}
+
+#navbar-postit {
+    height: 40px;
+    width: 40px;
+    margin: 0.15em;
+    background: #FFF3CD;
+    transform: rotate(-5deg);
+}
+
+#login-form {
+    padding: 1.5em;
+}
+
+#login-form input {
+    background: #FFC;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+.game-options {
+    position: relative;
+    top: 15%;
+}
+
+.square-postit-small {
+    height: 80px;
+    width: 80px;
+    margin: 0.15em;
+}
+
+.square-postit-big {
+    height: 140px;
+    width: 140px;
+    margin: 0.15em;
+}
+
+.square-postit-bigger {
+    height: 300px;
+    width: 300px;
+    margin: 0.15em;
+}
+
+.rectangle-postit-small {
+     height: 140px;
+     width: 280px;
+     margin: 0.15em;
+}
+
+.rectangle-postit-big {
+    height: 240px;
+    width: 380px;
+    margin: 0.15em;
+}
+
+.blue-postit {
+    background: #8EFFFF;
+}
+
+.green-postit {
+    background: #E3FC9E;
+}
+
+.yellow-postit {
+    background: #FFC;
+}
+
+.postit-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-small {
+    font-size: 1.0em;
+}
+
+.text-normal {
+    font-size: 1.5em;
+}
+
+.text-big {
+    font-size: 2em;
+}
