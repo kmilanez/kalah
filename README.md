@@ -44,7 +44,6 @@ To start and stop the app:
 ```shell
 > ./text-diff.sh start
 ```
-
 ```shell
 > ./text-diff.sh stop
 ```
@@ -56,13 +55,11 @@ In case you don't want to use the script, each project can be executed using gra
 ```shell
 > ./diff-service/gradlew bootRun
 ```
-
 And you will need to start mongodb container manually:
 
 ```shell
 > docker container run -d -p 27000:27017 --name mongo mongo:latest
 ```
-
 Or install it. You also need to adjust the service properties to point to right data source and eureka zone.
 
 The provided script have functions that automate these tasks. You can adapt them if necessary.
