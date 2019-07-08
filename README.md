@@ -64,7 +64,7 @@ Or install it. You also need to adjust the service properties to point to right 
 
 The provided script have functions that automate these tasks. You can adapt them if necessary.
 
-# How to run
+# How to play a turn
 
 Here's the sequence of events to play a turn:
 
