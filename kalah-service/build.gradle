@@ -8,6 +8,8 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.kmilanez'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+// Jar name
+bootJar.archiveName="${rootProject.name}.jar"
 
 configurations {
 	developmentOnly

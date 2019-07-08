@@ -19,7 +19,7 @@ public class CleanupEndedGames {
         this.gameRepository = gameRepository;
     }
 
-    @Scheduled(cron = "0 */5 * * *")
+    @Scheduled(cron = "* * 5 * * *")
     public void cleanEndedGames() {
         log.info("Starting cleanup of ended games");
         List<Game> endedGames = gameRepository.findAll().stream()
