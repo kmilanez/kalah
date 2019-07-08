@@ -44,6 +44,7 @@ To start and stop the app:
 ```shell
 > ./text-diff.sh start
 ```
+
 ```shell
 > ./text-diff.sh stop
 ```
@@ -55,6 +56,7 @@ In case you don't want to use the script, each project can be executed using gra
 ```shell
 > ./diff-service/gradlew bootRun
 ```
+
 And you will need to start mongodb container manually:
 
 ```shell
@@ -70,8 +72,14 @@ Here's the sequence of events to play a turn:
 
 * POST -> http://localhost:8081/users passing payload: {"username":"<yourusername>","password":"<yourpassword>"}
 * POST -> http://localhost:8081/auth passing payload: {"username":"<yourusername>","password":"<yourpassword>"}
-* POST -> http://localhost:8081/games passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header
-At this point game will wait for a second player. For that, add a new user following above steps
+* POST -> http://localhost:8081/games passing token from authentication request in "Authorization" header
+
+At this point game will wait for a second player. For that, add a new user following above steps and join game:
+
+* POST -> http://localhost:8081/games/game-id passing token from authentication request in "Authorization" header
+
+To play a turn:
+
 * PUT -> http://localhost:8081/games/game-id/pit-id passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header. First player available pits are {1,2,3,4,5,6} and second player have {8,9,10,11,12,13}. {7,14} are reserved for kalahs. 
 
 
