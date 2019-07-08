@@ -72,7 +72,7 @@ Here's the sequence of events to play a turn:
 * POST -> http://localhost:8081/auth passing payload: {"username":"<yourusername>","password":"<yourpassword>"}
 * POST -> http://localhost:8081/games passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header
 At this point game will wait for a second player. For that, add a new user following above steps
-* PUT -> http://localhost:8081/games/game-id/pit-id passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header. First player available pits are {1,2,3,4,5,6,7} and second player have {8,9,10,11,12,13,14} 
+* PUT -> http://localhost:8081/games/game-id/pit-id passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header. First player available pits are {1,2,3,4,5,6} and second player have {8,9,10,11,12,13}. {7,14} are reserved for kalahs. 
 
 
 # Future improvements
