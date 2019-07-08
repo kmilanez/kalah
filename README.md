@@ -5,7 +5,7 @@ Tool to analyze differences between two base64 encoded payloads (json, xml, plai
 # About the architecture
 The game was designed based on a microservice architecture. Each service is responsible for a single capabilite and interfaces with each other when needed. 
 
-It also has a Api gateway for future frontend implementaion (You can find screens under frontend-static, but the integration with frontend is pending).
+It also has a Api gateway for future frontend implementaion (You can find screens under frontend-static).
 
 App is composed of the following services:
 
