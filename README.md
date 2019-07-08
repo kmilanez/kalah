@@ -37,6 +37,45 @@ I choose good old Junit + Mockito stack for testing.
 Test coverage is around 80%, considering all the projects together.
 
 # How to run
+The project provides a script for starting and stopping the app, in standlone approach or using Docker.
+
+To start and stop the app:
+
+```shell
+> ./text-diff.sh start
+```
+
+```shell
+> ./text-diff.sh stop
+```
+
+This will build all the projects, run the tests and build the containers. Then it will run everything.
+
+In case you don't want to use the script, each project can be executed using gradle wrapper:
+
+```shell
+> ./diff-service/gradlew bootRun
+```
+
+And you will need to start mongodb container manually:
+
+```shell
+> docker container run -d -p 27000:27017 --name mongo mongo:latest
+```
+
+Or install it. You also need to adjust the service properties to point to right data source and eureka zone.
+
+The provided script have functions that automate these tasks. You can adapt them if necessary.
+
+# How to run
+
+Here's the sequence of events to play a turn:
+
+* POST -> http://localhost:8081/users passing payload: {"username":"<yourusername>","password":"<yourpassword>"}
+* POST -> http://localhost:8081/auth passing payload: {"username":"<yourusername>","password":"<yourpassword>"}
+* POST -> http://localhost:8081/games passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header
+* At this point game will wait for a second player. For that, add a new user following above steps
+* PUT -> http://localhost:8081/games/<game-id>/<pit-id> passing payload: {"username":"<yourusername>","password":"<yourpassword>"} and token from authentication request in "Authorization" header. First player available pits are {1,2,3,4,5,6,7} and second player have {8,9,10,11,12,13,14} 
 
 
 # Future improvements
