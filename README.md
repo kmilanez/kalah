@@ -54,7 +54,7 @@ This will build all the projects, run the tests and build the containers. Then i
 In case you don't want to use the script, each project can be executed using gradle wrapper:
 
 ```shell
-> ./diff-service/gradlew bootRun
+> ./kalah-service/gradlew bootRun
 ```
 
 And you will need to start mongodb container manually:
