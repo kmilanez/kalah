@@ -1,11 +1,11 @@
 Kalah
 ===================
-Tool to analyze differences between two base64 encoded payloads (json, xml, plain text, etc) of the same size
+6 stone kalah implementation
 
 # About the architecture
 The game was designed based on a microservice architecture. Each service is responsible for a single capabilite and interfaces with each other when needed. 
 
-It also has a Api gateway for future frontend implementaion (You can find screens under frontend-static).
+It also has a Api Gateway for future frontend implementation (You can find screens under frontend-static).
 
 App is composed of the following services:
 
@@ -16,7 +16,7 @@ App is composed of the following services:
 | gateway  |  Entry point to expose services to frontend systems and users |
 | registry  | Service registry and discovery pattern |
 
-App was designed with scalability in mind. Each service is stateless and can scale horizontaly. All data is store in microservices respective databases, and this can
+App was designed with scalability in mind. Each service is stateless and can scale horizontaly. All data is store in microservices respective databases, running on Docker, which can scale as well.
 
 # About technologies used
 The stack used is for the services is Spring with Spring Boot. Infrastructure is based on Spring Cloud Netflix, that integrates Netflix OSS stack to Spring ecosystem.
@@ -42,11 +42,11 @@ The project provides a script for starting and stopping the app, in standlone ap
 To start and stop the app:
 
 ```shell
-> ./text-diff.sh start
+> ./kalah.sh start
 ```
 
 ```shell
-> ./text-diff.sh stop
+> ./kalah.sh stop
 ```
 
 This will build all the projects, run the tests and build the containers. Then it will run everything.
